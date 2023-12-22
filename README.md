@@ -19,7 +19,7 @@ Add the server to your application start up.
 ```elixir
 children = [
   # ....
-  {BacklightAutomation, [active_level: 100, inactive_level: 30, dim_interval: 60]}
+  {BacklightAutomation.Application, [active_level: 100, inactive_level: 30, dim_interval: 60]}
 ]
 ```
 
@@ -37,3 +37,13 @@ The interval for going inactive can also be changed, it takes a number of second
 ```elixir
 iex> BacklightAutomation.dim_interval(90)
 ```
+
+## Configuration
+
+The BacklightAutomation.Application takes a keyword list where you can override defaults.
+
+Valid options
+  - active_level
+  - inactive_level
+  - dim_interval
+  - screen_names
